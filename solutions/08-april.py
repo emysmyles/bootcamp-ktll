@@ -5,7 +5,6 @@ two examples of each of the methods.
 """
 
 # ANSWER 1
-import string
 
 
 my_needs = ["shoes", "clothes", "bags", "headset"]
@@ -142,14 +141,15 @@ del list[2:5]
 print(list)
 
 list.pop(1)
-add_list = ['a', 'bit']
+add_list = ["a", "bit"]
 list.extend(add_list)
 print(list)
 
 
-del list[2:4]; list.sort(reverse=True)
+del list[2:4]
+list.sort(reverse=True)
 add_list.extend(list)
-add_list.insert(4,'not')
+add_list.insert(4, "not")
 print(add_list)
 
 
@@ -198,7 +198,20 @@ of all the letters A-Z.
 """
 # ANSWER 6
 
+# alphabets =  ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+# vowel = ["a", "e", "i", "o", "u"]
 
+# result = [char for char in alphabets if char in vowel]
+# print(result)
 
+alphabets = [chr(i) for i in range (97,123)]
+vowel = ["a", "e", "i", "o", "u"]
+result = [char for char in alphabets if char in vowel]
+print(result)
 
+# import string
 
+# list(string.ascii_uppercase)
+# vowel = ["a", "e", "i", "o", "u"]
+# result = [char for char in alphabet if char in vowel]
+# print(result)
