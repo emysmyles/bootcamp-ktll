@@ -63,4 +63,18 @@ while num <= 20:
         print("even number", num)
     num += 1
 
+# for num in range(1,10):
+#     print("\U0001f600" * num)
+
+#print a loop with smileys like a pyramid
+times = 1
+while times < 11:
+    print("\U0001f600" * times )
+    times += 1  
+
+for x in range(3):#this prints the result 3 times
+    for num in range(1,10):
+        print("\U0001f600" * num)
+
+# without string multiplication
 

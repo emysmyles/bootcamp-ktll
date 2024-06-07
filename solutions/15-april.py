@@ -61,6 +61,8 @@ name = "Keme"
 number = len(name) * 7
 print("Hello " + name + ". Your lucky number is " + str(number))
 """
+#ANSWER
+
 
 """
 Question #4

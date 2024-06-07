@@ -86,3 +86,38 @@ counter = 0
 while counter < favourite_number:
     print(fav_word)
     counter += 1
+
+"""
+Exercise
+loop through numbers 1 - 20
+for 4 and 13, print "x is unlucky
+for even numbers, print "x is even"
+for odd numbers, print "x is odd"
+"""
+#solution
+#for x in range(1, 21):
+#     if x == 4 or x == 13:
+#         print(f"{x} is unlucky")
+#     elif x % 2 == 0:
+#         print(f"{x} is even")
+#     else:
+#         print(f"{x} is odd")
+    
+for x in range(1, 21):
+    if x == 4 or x == 13:
+        state = "unlucky"
+    elif x % 2 == 0:
+        state = "even"
+    else:
+        state = "odd"
+    print(f"{x} is {state}")
+
+#without string multiplication
+#print out smileys lika a pyramid
+for num in range(1,11):
+    count = 1
+    smileys = ""
+    while count <= num:
+        smileys += "\U0001f600" 
+        count += 1
+    print()

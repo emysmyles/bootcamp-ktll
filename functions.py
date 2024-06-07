@@ -10,6 +10,8 @@ Every function may have `return` a value or Python will return None implicitly.
 
 Function takes arguments inside the ().
 """
+
+
 def functionane(arguments):
     return 1
 
@@ -31,33 +33,38 @@ There are two types of arguments in python:
         change the positions of arguments.
 """
 # Example - user define functions
-def print_first_name(first_name):
-    print(first_name)
 
-# How to use the function defined above
-my_first_name = "john"
-print_first_name(my_first_name)  # we are now calling the function with one argument
+
+# we are now calling the function with one argument
+
 
 def print_first_name_with_return(first_name):
     return first_name
 
+
 result = print_first_name_with_return(my_first_name)
 print(result)
 
-print(print_first_name_with_return(my_first_name))
+print(print_first_name_with_return(my_first_name)) # type: ignore
 
 """
 # CLASSWORK
 --------------------------------------------------------------------
-Write a function that takes two arguments, your first name and last name then prints your full name.
-Write another function that takes two arguments, your first name and last name then returns your full name.
+Write a function that takes two arguments, your first name and last name then 
+prints your full name.
+Write another function that takes two arguments, your first name and last name
+then returns your full name.
 """
 # Solution
+
+
 def print_full_name(first_name, last_name):
     print(first_name + " " + last_name)
 
+
 def print_full_name_with_return(first_name, last_name):
     return first_name + " " + last_name
+
 
 print_full_name("john", 'doe')
 print_full_name("doe", 'john')  # positional argument
@@ -81,6 +88,6 @@ family_details(name='john doe', age=14, gender='male')
 """
 # CLASSWORK
 ----------------------------------------------------------------
-Write a function that asks a user for his first name and then his last name and print
-last name before first name.
+Write a function that asks a user for his first name and then his last name 
+and print last name before first name.
 """

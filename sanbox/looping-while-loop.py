@@ -53,3 +53,15 @@ while age > 23:
         print("Add more cups", cups)
         cups = cups + 1
 
+
+msg = input ("what's the secret password?")
+while msg != "bananas":
+    print("WRONG")
+    msg = input ("what's the secret password?").lower()
+print("CORRECT")
+
+
+num = 1
+while num < 11:
+    print (num)
+    num += 1

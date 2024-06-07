@@ -11,16 +11,17 @@ it has been defined.
 A list can be created by using []. 
 A list can contain elements of different data types.
 """
+
 # Example - we can create an empty list
 empty_list = []
 # Example - we can create a list of colors
-colors = ['red', 'white', 'blue', 'brown', 'black', 'cyan']
+colors = ["red", "white", "blue", "brown", "black", "cyan"]
 # so we can index into a list to get each element out
-print(colors[0]) # will give you the first element of the list -> (red)
-print(colors[3]) # will give the fourth element of the list -> (brown)
+print(colors[0])  # will give you the first element of the list -> (red)
+print(colors[3])  # will give the fourth element of the list -> (brown)
 
 # list of elements with different data types
-heterogenous = [23, 'male', 'dark', 'short', 6.7, False]
+heterogenous = [23, "male", "dark", "short", 6.7, False]
 print(heterogenous[0])
 
 # we can mutate a list
@@ -33,10 +34,10 @@ print(heterogenous[0])
 Create a list of 5 items of your choice and print out the 
 second to the fourth element of the list.
 """
-fruits = ['mango', 'banana', 'orange', 'apple', 'pineapple']
+fruits = ["mango", "banana", "orange", "apple", "pineapple"]
 print(fruits[1:4])
 
-print(type(fruits)) # this should tell you the data type of the variable
+print(type(fruits))  # this should tell you the data type of the variable
 ans = fruits[1:4]
 
 # LIST OPERATIONS
@@ -45,30 +46,30 @@ ans = fruits[1:4]
 print(type(ans))
 
 # check the length of a list
-list_length = len(fruits) # use the function len()
+list_length = len(fruits)  # use the function len()
 print(list_length)
 
 print(fruits[4])
 
 # check if a list contains certain element using `in`
-'rainbow' in fruits # bool
-if 'mango' in fruits:
+"rainbow" in fruits  # bool
+if "mango" in fruits:
     print("There is a fruit called rainbow.")
 else:
     print("Rainbow is not a fruit.")
 
 # remove the element of a list at a given position
 print(fruits)
-third_element = fruits.pop(3) # pop() removes and return an element of a list
+third_element = fruits.pop(3)  # pop() removes and return an element of a list
 print(third_element)
 print(fruits)
 
 # add element to a list
-fruits.append('guava') # this will add the element at the end of the list
+fruits.append("guava")  # this will add the element at the end of the list
 print(fruits)
 
 # insert an element into a certain index
-fruits.insert(1, 'pear')
+fruits.insert(1, "pear")
 print(fruits)
 
 # loop over the elements of a list
@@ -111,4 +112,16 @@ print(ages)
 Create a list of names of 8 books. Then create another list
 that only holds the books that have names shorter than 8.
 """
-books = ['pimpo']
+books = [
+    "pimpo",
+    "yellowsun",
+    "upside_down",
+    "avatar",
+    "mississipi",
+    "giants",
+    "tales_by_moonlight",
+    "tree"
+]
+for book in books:
+    if len(book) < 8:
+        print("this book is less than 8 :", book)
