@@ -32,32 +32,31 @@
 # sing_happy_birthday("Emem")
 
 #DEFAULT PARAMETERS
-def exponent(num, power):
-    return num ** power
 
-print(exponent(2,4))
-print(exponent(5,5))
+"""
+create a tuple of 6 email addresses, then write a function that 
+takes the tuple as argument. The function will check if the email
+is not ending with a ".com". it will change it to a ".com" and 
+add it to a list. if it is ending with a ".com", it will simply 
+just add it to the list. Then will return the list.
 
-def exponent(num, power=2):
-    return num ** power
+"""
+# email_addresses = ("jolie@gmail.com","donnie@aviance.net",
+#                    "mime@yahoo.com","mami@nahco.net",
+#                    "wasiu@yahoo.com","daddy@gmail.co.uk")
 
-print(exponent(9))
+# def
+
+nums =[2,4,6,8,10]
+doubles = map(lambda x: x*2, nums)# to turn it into a list
+#list(map(lambda x: x*2,nums))
+print(doubles)
+for num in doubles:
+    print(num)
+
+people =["Darcy", "Christina", "Dana", "Annabel"]
+
+peeps = map(lambda name: name.upper(), people)
+print(list(peeps))
 
 
-# example 2
-def add(a=10, b=13):
-    return a + b
-
-print(add(11, 28))
-print(add())
-
-# example 3
-def show_information(first_name="colt", is_instructor = False):
-    if first_name == "colt" and is_instructor:
-        return "welcome back instructor colt"
-    elif first_name == "colt":
-        return "i really thought you were an intructor..."
-    return f"Hello {first_name} !"
-print(show_information())
-print(show_information("eme"))
-print(show_information(is_instructor=True))
