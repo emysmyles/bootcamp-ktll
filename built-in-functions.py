@@ -4,37 +4,44 @@ Change the name to upper case letters.
 Add a greeting to the name.
 And then ask the person, if he wants to continue.
 """
+
 # name = input('Type your name here: ')
 # name = name.upper()
 # "Hello " + name
 # "Do you want to continue?"
 
+
 def greetings():
-    name = input('Type your name here: ')
+    name = input("Type your name here: ")
     name = name.upper()
     print("Hello " + name)
     print("Do you want to continue?")
 
+
 # greetings()
 # greetings()
 
+
 def age_check(age, name):
     if age < 18:
-        return "Hello "  + name + " you are qualified!"
+        return "Hello " + name + " you are qualified!"
         print("Done")
     else:
         return "Hello " + name + " your are unqualified!"
 
+
 # result = age_check(15, 'ima')
 # result = age_check(name='ima', age=15)
 # print(result)
+
 
 def var_number_of_argument_function(*args):
     for arg in args:
         print(arg)
     return "Done"
 
-res = var_number_of_argument_function('wilson', 89, 'js1', 'male')
+
+res = var_number_of_argument_function("wilson", 89, "js1", "male")
 print(res)
 
 """
@@ -52,25 +59,31 @@ define the function before using it, you may need to write a lambda function.
 A lambda function cannot be used in more than one place.
 Using the lambda function is a quick way of writing functions on the fly.
 """
+
+
 def raise_to_power_2(number):
-    return number ** 2
+    return number**2
+
 
 ret = raise_to_power_2(4)
 print(type(ret))
 
-rest = lambda number: number ** 2
+rest = lambda number: number**2
 print(type(rest))
 print(rest(4))
 
-multilpy = lambda x, y: x*y
-print(multilpy(7,1))
+multilpy = lambda x, y: x * y
+print(multilpy(7, 1))
 
-colors = ['red', 'white', 'blue', 'brown', 'black', 'cyan']
+colors = ["red", "white", "blue", "brown", "black", "cyan"]
 """
 Write a program that returns a list with the colors in upper case letters.
 """
+
+
 def capital_letters(word):
     return word.upper()
+
 
 print([color.upper() for color in colors])
 print([capital_letters(color) for color in colors])
@@ -102,14 +115,14 @@ each element of the iterables.
 """
 # zip(*iterable)
 # index = [1, 2, 3, 4, 5, 6]
-zip_colors = list(zip(range(len(colors)), colors, range(6), [0,1,2,3,4,5]))
+zip_colors = list(zip(range(len(colors)), colors, range(6), [0, 1, 2, 3, 4, 5]))
 print(type(zip(colors)))
 print(zip_colors)
 
 
-[0,1,2,3,4,5]
-['red', 'white', 'blue', 'brown', 'black', 'cyan']
-[0,1,2,3,4,5]
+[0, 1, 2, 3, 4, 5]
+["red", "white", "blue", "brown", "black", "cyan"]
+[0, 1, 2, 3, 4, 5]
 
 """
 # ENUMERATE FUNCTION
@@ -140,7 +153,7 @@ Use this list:
 myList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 """
 # 1 - solution
-fifth_power = lambda num: num ** 5
+fifth_power = lambda num: num**5
 print(type(fifth_power))
 fifth_res = fifth_power(2)
 print(fifth_res)
@@ -163,10 +176,10 @@ The round function is used to round floating point numbers to a desired number
 of decimal places. It takes two arguments, the first one being the number to
 be rounded and the second being the number of decimal places to be rounded to.
 """
-round_funct_map = list(map(round, circle_areas, range(1,7))) # 1,2,3,4,5,6
+round_funct_map = list(map(round, circle_areas, range(1, 7)))  # 1,2,3,4,5,6
 print(round_funct_map)
 
-round_funct_map = list(map(round, circle_areas, [2,2,2,2,2,2]))
+round_funct_map = list(map(round, circle_areas, [2, 2, 2, 2, 2, 2]))
 print(round_funct_map)
 
 
@@ -204,3 +217,49 @@ Write a program that will return a list of names that are less than or equal
 to 7 letters.
 """
 print(list(filter(lambda p: len(p) <= 7, my_names)))
+
+
+print("pppppppppppppppppppppppp")
+
+numbers = [48, 16, 17, 4, 12, 2]
+square = list(zip(map(lambda x: x**2, numbers), numbers))
+print(square)
+
+print("888988988889888888")
+mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print([(lambda num: num**num)(num) for num in mylist])
+
+
+print(round(34.6897234, 4))
+
+chem_scores = [66, 90, 59, 76, 60, 88, 74, 81, 65]
+print(list(filter(lambda x: x % 2 != 0, chem_scores)))
+
+
+print(list(filter(lambda y: len(y) <= 7, my_names)))
+
+print("pppppppppppppppppppppp")
+
+emails = (
+    "joliefille@gmail.co.uk",
+    "udybbe@yahoo.com",
+    "mime@nahcoaviance.net",
+    "kiwii@yahoo.org",
+    "aitee@yahoo.com",
+)
+
+
+def proper_email(emails):
+    clean_emails = []
+    for email in emails:
+        dot = email.index(".")
+        root = email[dot:]
+        if root != ".com":
+            new_email = email[:dot] + ".com"
+            clean_emails.append(new_email)
+        else:
+            clean_emails.append(email)
+    return clean_emails
+
+
+
